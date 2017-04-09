@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PINCache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-WUNDER.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,7 +22,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>8060F7D9354A3A56529F84FB6F01D1E2</key>
+		<key>9D24940CEED9179AD5A1CCCA3815C98D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C1DCB78236100D17ABE0441AE3937D92</key>
 		<dict>
 			<key>primary</key>
 			<true/>

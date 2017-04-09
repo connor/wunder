@@ -19,16 +19,6 @@
     return [NSURL URLWithString:@"http://a.wunderlist.com/api/v1/"];
 }
 
-/*+ (instancetype)manager
-{
-    static WDRAPIClient *apiClient = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        apiClient = [[self alloc] init];
-    });
-    return apiClient;
-}*/
-
 - (instancetype)initWithBaseURL:(NSURL *)url
 {
     self = [super initWithBaseURL:url];
