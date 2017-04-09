@@ -1,0 +1,20 @@
+{
+  "id": "task.json",
+  "title": "task",
+  "description": "Schema definition of a Task",
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "created_by_id": { "type": "string" },
+    "created_by_request_id": { "type": "string" },
+    "due_date": { "type": "string", "format": "date-time" },
+    "completed": { "type": "boolean" },
+    "starred": { "type": "boolean" },
+    "list_id": { "type": "string" },
+    "revision": { "type": "string" },
+    "title": { "type": "string" },
+    "type": { "type": "string" }
+  }
+}

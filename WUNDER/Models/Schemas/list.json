@@ -1,0 +1,17 @@
+{
+  "id": "list.json",
+  "title": "list",
+  "description": "Schema definition of a List",
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "owner_type": { "type": "string" },
+    "owner_id": { "type": "string" },
+    "list_type": { "type": "string" },
+    "public": { "type": "boolean" },
+    "revision": { "type": "number" },
+    "type": { "type": "string" }
+  }
+}
