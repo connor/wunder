@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FB3042822E4D58B3AEF0C99 /* libPods-WUNDER.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F58CB1BE6549A40E3D7ABAA5 /* libPods-WUNDER.a */; };
 		FC5A7C871E99D92500AE26C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A7C861E99D92500AE26C6 /* AppDelegate.m */; };
 		FC5A7C8A1E99D92500AE26C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A7C891E99D92500AE26C6 /* main.m */; };
 		FC5A7C8C1E99D92500AE26C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC5A7C8B1E99D92500AE26C6 /* Assets.xcassets */; };
@@ -33,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C67EB2812667CC240AB18E9 /* Pods-WUNDER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WUNDER.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WUNDER/Pods-WUNDER.debug.xcconfig"; sourceTree = "<group>"; };
+		6CAEDF2C7705EA05123F1D89 /* Pods-WUNDER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WUNDER.release.xcconfig"; path = "Pods/Target Support Files/Pods-WUNDER/Pods-WUNDER.release.xcconfig"; sourceTree = "<group>"; };
+		F58CB1BE6549A40E3D7ABAA5 /* libPods-WUNDER.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WUNDER.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5A7C821E99D92500AE26C6 /* WUNDER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WUNDER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5A7C851E99D92500AE26C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FC5A7C861E99D92500AE26C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB3042822E4D58B3AEF0C99 /* libPods-WUNDER.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +78,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03C5AE8F0D39B80006C39149 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C67EB2812667CC240AB18E9 /* Pods-WUNDER.debug.xcconfig */,
+				6CAEDF2C7705EA05123F1D89 /* Pods-WUNDER.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B17E074014F6834E576C9F8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F58CB1BE6549A40E3D7ABAA5 /* libPods-WUNDER.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FC5A7C791E99D92500AE26C6 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +102,8 @@
 				FC5A7C981E99D92500AE26C6 /* WUNDERTests */,
 				FC5A7CA31E99D92500AE26C6 /* WUNDERUITests */,
 				FC5A7C831E99D92500AE26C6 /* Products */,
+				03C5AE8F0D39B80006C39149 /* Pods */,
+				B17E074014F6834E576C9F8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,9 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC5A7CA91E99D92500AE26C6 /* Build configuration list for PBXNativeTarget "WUNDER" */;
 			buildPhases = (
+				AB357CF3F05D2184CE57AC3E /* [CP] Check Pods Manifest.lock */,
 				FC5A7C7E1E99D92500AE26C6 /* Sources */,
 				FC5A7C7F1E99D92500AE26C6 /* Frameworks */,
 				FC5A7C801E99D92500AE26C6 /* Resources */,
+				BBC2BC853CD6CAD57BC55331 /* [CP] Embed Pods Frameworks */,
+				704466C5AF7AB06B550945EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,6 +285,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		704466C5AF7AB06B550945EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WUNDER/Pods-WUNDER-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB357CF3F05D2184CE57AC3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BBC2BC853CD6CAD57BC55331 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WUNDER/Pods-WUNDER-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC5A7C7E1E99D92500AE26C6 /* Sources */ = {
@@ -401,6 +476,7 @@
 		};
 		FC5A7CAA1E99D92500AE26C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C67EB2812667CC240AB18E9 /* Pods-WUNDER.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -413,6 +489,7 @@
 		};
 		FC5A7CAB1E99D92500AE26C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CAEDF2C7705EA05123F1D89 /* Pods-WUNDER.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
