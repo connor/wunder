@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "WDRAPIClient.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,9 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    [[WDRAPIClient manager] fetchListsWithSuccess:^(NSArray<WDRList *> *lists) {
+        
+    } andFailure:nil];
 }
 
 

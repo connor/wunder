@@ -14,6 +14,11 @@
 		FC5A7C8F1E99D92500AE26C6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC5A7C8D1E99D92500AE26C6 /* MainMenu.xib */; };
 		FC5A7C9A1E99D92500AE26C6 /* WUNDERTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A7C991E99D92500AE26C6 /* WUNDERTests.m */; };
 		FC5A7CA51E99D92500AE26C6 /* WUNDERUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A7CA41E99D92500AE26C6 /* WUNDERUITests.m */; };
+		FC5A7CBA1E99DE4000AE26C6 /* WDRList.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A7CB71E99DE4000AE26C6 /* WDRList.m */; };
+		FC5A7CBB1E99DE4000AE26C6 /* WDRTask.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A7CB91E99DE4000AE26C6 /* WDRTask.m */; };
+		FC5A7CBE1E99DE5000AE26C6 /* WDRAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A7CBD1E99DE5000AE26C6 /* WDRAPIClient.m */; };
+		FC5A7CC11E99E2D100AE26C6 /* PlankModelRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A7CC01E99E2D100AE26C6 /* PlankModelRuntime.m */; };
+		FC5A7CC31E99E60200AE26C6 /* WUNDERLIST_API_KEYS.json in Resources */ = {isa = PBXBuildFile; fileRef = FC5A7CC21E99E60200AE26C6 /* WUNDERLIST_API_KEYS.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,15 @@
 		FC5A7CA01E99D92500AE26C6 /* WUNDERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WUNDERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5A7CA41E99D92500AE26C6 /* WUNDERUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WUNDERUITests.m; sourceTree = "<group>"; };
 		FC5A7CA61E99D92500AE26C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC5A7CB61E99DE4000AE26C6 /* WDRList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WDRList.h; path = Models/WDRList.h; sourceTree = "<group>"; };
+		FC5A7CB71E99DE4000AE26C6 /* WDRList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WDRList.m; path = Models/WDRList.m; sourceTree = "<group>"; };
+		FC5A7CB81E99DE4000AE26C6 /* WDRTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WDRTask.h; path = Models/WDRTask.h; sourceTree = "<group>"; };
+		FC5A7CB91E99DE4000AE26C6 /* WDRTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WDRTask.m; path = Models/WDRTask.m; sourceTree = "<group>"; };
+		FC5A7CBC1E99DE5000AE26C6 /* WDRAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDRAPIClient.h; sourceTree = "<group>"; };
+		FC5A7CBD1E99DE5000AE26C6 /* WDRAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDRAPIClient.m; sourceTree = "<group>"; };
+		FC5A7CBF1E99E2D100AE26C6 /* PlankModelRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlankModelRuntime.h; path = Models/PlankModelRuntime.h; sourceTree = "<group>"; };
+		FC5A7CC01E99E2D100AE26C6 /* PlankModelRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlankModelRuntime.m; path = Models/PlankModelRuntime.m; sourceTree = "<group>"; };
+		FC5A7CC21E99E60200AE26C6 /* WUNDERLIST_API_KEYS.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WUNDERLIST_API_KEYS.json; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +134,9 @@
 		FC5A7C841E99D92500AE26C6 /* WUNDER */ = {
 			isa = PBXGroup;
 			children = (
+				FC5A7CC21E99E60200AE26C6 /* WUNDERLIST_API_KEYS.json */,
+				FC5A7CB31E99DE2500AE26C6 /* Networking */,
+				FC5A7CB21E99DE2100AE26C6 /* Models */,
 				FC5A7C851E99D92500AE26C6 /* AppDelegate.h */,
 				FC5A7C861E99D92500AE26C6 /* AppDelegate.m */,
 				FC5A7C8B1E99D92500AE26C6 /* Assets.xcassets */,
@@ -154,6 +171,28 @@
 				FC5A7CA61E99D92500AE26C6 /* Info.plist */,
 			);
 			path = WUNDERUITests;
+			sourceTree = "<group>";
+		};
+		FC5A7CB21E99DE2100AE26C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC5A7CBF1E99E2D100AE26C6 /* PlankModelRuntime.h */,
+				FC5A7CC01E99E2D100AE26C6 /* PlankModelRuntime.m */,
+				FC5A7CB61E99DE4000AE26C6 /* WDRList.h */,
+				FC5A7CB71E99DE4000AE26C6 /* WDRList.m */,
+				FC5A7CB81E99DE4000AE26C6 /* WDRTask.h */,
+				FC5A7CB91E99DE4000AE26C6 /* WDRTask.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FC5A7CB31E99DE2500AE26C6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FC5A7CBC1E99DE5000AE26C6 /* WDRAPIClient.h */,
+				FC5A7CBD1E99DE5000AE26C6 /* WDRAPIClient.m */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC5A7CC31E99E60200AE26C6 /* WUNDERLIST_API_KEYS.json in Resources */,
 				FC5A7C8C1E99D92500AE26C6 /* Assets.xcassets in Resources */,
 				FC5A7C8F1E99D92500AE26C6 /* MainMenu.xib in Resources */,
 			);
@@ -339,7 +379,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC5A7CBB1E99DE4000AE26C6 /* WDRTask.m in Sources */,
 				FC5A7C8A1E99D92500AE26C6 /* main.m in Sources */,
+				FC5A7CBE1E99DE5000AE26C6 /* WDRAPIClient.m in Sources */,
+				FC5A7CC11E99E2D100AE26C6 /* PlankModelRuntime.m in Sources */,
+				FC5A7CBA1E99DE4000AE26C6 /* WDRList.m in Sources */,
 				FC5A7C871E99D92500AE26C6 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,6 +613,7 @@
 				FC5A7CAB1E99D92500AE26C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC5A7CAC1E99D92500AE26C6 /* Build configuration list for PBXNativeTarget "WUNDERTests" */ = {
 			isa = XCConfigurationList;
@@ -577,6 +622,7 @@
 				FC5A7CAE1E99D92500AE26C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC5A7CAF1E99D92500AE26C6 /* Build configuration list for PBXNativeTarget "WUNDERUITests" */ = {
 			isa = XCConfigurationList;
@@ -585,6 +631,7 @@
 				FC5A7CB11E99D92500AE26C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

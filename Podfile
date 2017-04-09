@@ -1,5 +1,5 @@
-platform :osx
+platform :osx, '10.12'
 
 target 'WUNDER' do
-  pod 'AFNetworking'
+  pod 'AFNetworking', '~> 3.0'
 end
