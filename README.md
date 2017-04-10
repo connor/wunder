@@ -3,6 +3,8 @@
 This is a Mac App that sits in your status bar and updates it with tasks
 due Today in Wunderlist.
 
+![](https://cl.ly/102U2P010I2E/Screen%20Shot%202017-04-10%20at%2011.54.11.png)
+
 # Steps to use:
 
 1) Download or clone the repo.
