@@ -1,7 +1,6 @@
 # wunder Mac App
 
-This is a Mac App that sits in your status bar and updates it with tasks
-due Today in Wunderlist.
+This is a Mac App that sits in your status bar and updates it with tasks due Today in Wunderlist. Every 5 minutes, it refreshes in the background and updates the title of the menu with a random task. You can also click the title to see a dropdown of all your tasks due today, and clicking a specific task makes it the title.
 
 ![](https://cl.ly/102U2P010I2E/Screen%20Shot%202017-04-10%20at%2011.54.11.png)
 
