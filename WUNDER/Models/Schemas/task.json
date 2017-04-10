@@ -9,7 +9,7 @@
     "created_at": { "type": "string", "format": "date-time" },
     "created_by_id": { "type": "string" },
     "created_by_request_id": { "type": "string" },
-    "due_date": { "type": "string", "format": "date-time" },
+    "due_date": { "type": "string" },
     "completed": { "type": "boolean" },
     "starred": { "type": "boolean" },
     "list_id": { "type": "string" },

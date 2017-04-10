@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy, readonly) NSString * listType;
 @property (nullable, nonatomic, copy, readonly) NSString * ownerType;
 @property (nullable, nonatomic, copy, readonly) NSString * identifier;
+@property (nullable, nonatomic, strong, readonly) NSArray * tasks;
 @property (nullable, nonatomic, copy, readonly) NSString * ownerId;
 @property (nullable, nonatomic, copy, readonly) NSString * title;
 @property (nullable, nonatomic, copy, readonly) NSString * type;
@@ -38,6 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy, readwrite) NSString * listType;
 @property (nullable, nonatomic, copy, readwrite) NSString * ownerType;
 @property (nullable, nonatomic, copy, readwrite) NSString * identifier;
+@property (nullable, nonatomic, strong, readwrite) NSArray * tasks;
 @property (nullable, nonatomic, copy, readwrite) NSString * ownerId;
 @property (nullable, nonatomic, copy, readwrite) NSString * title;
 @property (nullable, nonatomic, copy, readwrite) NSString * type;

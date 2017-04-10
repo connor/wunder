@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WDRTask : NSObject<NSCopying, NSSecureCoding>
 @property (nullable, nonatomic, copy, readonly) NSString * revision;
-@property (nullable, nonatomic, strong, readonly) NSDate * dueDate;
+@property (nullable, nonatomic, copy, readonly) NSString * dueDate;
 @property (nonatomic, assign, readonly) BOOL starred;
 @property (nullable, nonatomic, copy, readonly) NSString * createdById;
 @property (nullable, nonatomic, copy, readonly) NSString * identifier;
@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WDRTaskBuilder : NSObject
 @property (nullable, nonatomic, copy, readwrite) NSString * revision;
-@property (nullable, nonatomic, strong, readwrite) NSDate * dueDate;
+@property (nullable, nonatomic, copy, readwrite) NSString * dueDate;
 @property (nonatomic, assign, readwrite) BOOL starred;
 @property (nullable, nonatomic, copy, readwrite) NSString * createdById;
 @property (nullable, nonatomic, copy, readwrite) NSString * identifier;

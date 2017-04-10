@@ -64,7 +64,7 @@ struct WDRTaskDirtyProperties {
         if ([key isEqualToString:@"due_date"]) {
             id value = valueOrNil(modelDictionary, @"due_date");
             if (value != nil) {
-                self->_dueDate = [[NSValueTransformer valueTransformerForName:kPlankDateValueTransformerKey] transformedValue:value];
+                self->_dueDate = value;
             }
             self->_taskDirtyProperties.WDRTaskDirtyPropertyDueDate = 1;
         }
@@ -231,7 +231,7 @@ struct WDRTaskDirtyProperties {
         (_completed == anObject.completed) &&
         (_starred == anObject.starred) &&
         (_revision == anObject.revision || [_revision isEqualToString:anObject.revision]) &&
-        (_dueDate == anObject.dueDate || [_dueDate isEqualToDate:anObject.dueDate]) &&
+        (_dueDate == anObject.dueDate || [_dueDate isEqualToString:anObject.dueDate]) &&
         (_createdById == anObject.createdById || [_createdById isEqualToString:anObject.createdById]) &&
         (_identifier == anObject.identifier || [_identifier isEqualToString:anObject.identifier]) &&
         (_createdAt == anObject.createdAt || [_createdAt isEqualToDate:anObject.createdAt]) &&
@@ -286,7 +286,7 @@ struct WDRTaskDirtyProperties {
         return self;
     }
     _revision = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"revision"];
-    _dueDate = [aDecoder decodeObjectOfClass:[NSDate class] forKey:@"due_date"];
+    _dueDate = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"due_date"];
     _starred = [aDecoder decodeBoolForKey:@"starred"];
     _createdById = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"created_by_id"];
     _identifier = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"id"];
@@ -430,7 +430,7 @@ struct WDRTaskDirtyProperties {
     _revision = revision;
     _taskDirtyProperties.WDRTaskDirtyPropertyRevision = 1;
 }
-- (void)setDueDate:(NSDate *)dueDate
+- (void)setDueDate:(NSString *)dueDate
 {
     _dueDate = dueDate;
     _taskDirtyProperties.WDRTaskDirtyPropertyDueDate = 1;

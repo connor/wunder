@@ -12,6 +12,12 @@
     "list_type": { "type": "string" },
     "public": { "type": "boolean" },
     "revision": { "type": "number" },
-    "type": { "type": "string" }
+    "type": { "type": "string" },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": { "$ref": "task.json" }
+      }
+    }
   }
 }

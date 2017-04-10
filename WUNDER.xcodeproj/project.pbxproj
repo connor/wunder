@@ -19,6 +19,7 @@
 		FC5A7CBE1E99DE5000AE26C6 /* WDRAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A7CBD1E99DE5000AE26C6 /* WDRAPIClient.m */; };
 		FC5A7CC11E99E2D100AE26C6 /* PlankModelRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A7CC01E99E2D100AE26C6 /* PlankModelRuntime.m */; };
 		FC5A7CC31E99E60200AE26C6 /* WUNDERLIST_API_KEYS.json in Resources */ = {isa = PBXBuildFile; fileRef = FC5A7CC21E99E60200AE26C6 /* WUNDERLIST_API_KEYS.json */; };
+		FC5A7CC81E99E7A000AE26C6 /* WDRModelCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A7CC71E99E7A000AE26C6 /* WDRModelCollection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		FC5A7CBF1E99E2D100AE26C6 /* PlankModelRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlankModelRuntime.h; path = Models/PlankModelRuntime.h; sourceTree = "<group>"; };
 		FC5A7CC01E99E2D100AE26C6 /* PlankModelRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlankModelRuntime.m; path = Models/PlankModelRuntime.m; sourceTree = "<group>"; };
 		FC5A7CC21E99E60200AE26C6 /* WUNDERLIST_API_KEYS.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WUNDERLIST_API_KEYS.json; sourceTree = SOURCE_ROOT; };
+		FC5A7CC61E99E7A000AE26C6 /* WDRModelCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDRModelCollection.h; sourceTree = "<group>"; };
+		FC5A7CC71E99E7A000AE26C6 /* WDRModelCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDRModelCollection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +137,8 @@
 		FC5A7C841E99D92500AE26C6 /* WUNDER */ = {
 			isa = PBXGroup;
 			children = (
-				FC5A7CC21E99E60200AE26C6 /* WUNDERLIST_API_KEYS.json */,
+				FC5A7CC41E99E78100AE26C6 /* Caching */,
+				FC5A7CC51E99E79100AE26C6 /* Misc. */,
 				FC5A7CB31E99DE2500AE26C6 /* Networking */,
 				FC5A7CB21E99DE2100AE26C6 /* Models */,
 				FC5A7C851E99D92500AE26C6 /* AppDelegate.h */,
@@ -193,6 +197,23 @@
 				FC5A7CBD1E99DE5000AE26C6 /* WDRAPIClient.m */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		FC5A7CC41E99E78100AE26C6 /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				FC5A7CC61E99E7A000AE26C6 /* WDRModelCollection.h */,
+				FC5A7CC71E99E7A000AE26C6 /* WDRModelCollection.m */,
+			);
+			name = Caching;
+			sourceTree = "<group>";
+		};
+		FC5A7CC51E99E79100AE26C6 /* Misc. */ = {
+			isa = PBXGroup;
+			children = (
+				FC5A7CC21E99E60200AE26C6 /* WUNDERLIST_API_KEYS.json */,
+			);
+			name = Misc.;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC5A7CC81E99E7A000AE26C6 /* WDRModelCollection.m in Sources */,
 				FC5A7CBB1E99DE4000AE26C6 /* WDRTask.m in Sources */,
 				FC5A7C8A1E99D92500AE26C6 /* main.m in Sources */,
 				FC5A7CBE1E99DE5000AE26C6 /* WDRAPIClient.m in Sources */,

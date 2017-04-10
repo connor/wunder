@@ -15,6 +15,7 @@
 
 - (void)fetchListsWithSuccess:(void (^)(NSArray<WDRList *> *lists))success andFailure:(void (^)(NSError *error))failure;
 - (void)fetchTasksForList:(WDRList *)list withSuccess:(void (^)(NSArray<WDRTask *> *tasks))success andFailure:(void (^)(NSError *error))failure;
+- (void)fetchAllTasksWithSuccess:(void (^)(void))success andFailure:(void (^)(NSError *error))failure;
 
 @property (nonatomic, strong, readonly) NSMutableArray<WDRList *> *taskLists;
 @property (nonatomic, strong, readonly) NSMutableArray<WDRTask *> *taskTasks;

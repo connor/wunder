@@ -15,6 +15,7 @@ struct WDRListDirtyProperties {
     unsigned int WDRListDirtyPropertyOwnerType:1;
     unsigned int WDRListDirtyPropertyPublic:1;
     unsigned int WDRListDirtyPropertyRevision:1;
+    unsigned int WDRListDirtyPropertyTasks:1;
     unsigned int WDRListDirtyPropertyTitle:1;
     unsigned int WDRListDirtyPropertyType:1;
 };
@@ -79,6 +80,13 @@ struct WDRListDirtyProperties {
             }
             self->_listDirtyProperties.WDRListDirtyPropertyIdentifier = 1;
         }
+        if ([key isEqualToString:@"tasks"]) {
+            id value = valueOrNil(modelDictionary, @"tasks");
+            if (value != nil) {
+                self->_tasks = value;
+            }
+            self->_listDirtyProperties.WDRListDirtyPropertyTasks = 1;
+        }
         if ([key isEqualToString:@"owner_id"]) {
             id value = valueOrNil(modelDictionary, @"owner_id");
             if (value != nil) {
@@ -128,6 +136,7 @@ struct WDRListDirtyProperties {
     _listType = builder.listType;
     _ownerType = builder.ownerType;
     _identifier = builder.identifier;
+    _tasks = builder.tasks;
     _ownerId = builder.ownerId;
     _title = builder.title;
     _type = builder.type;
@@ -141,7 +150,7 @@ struct WDRListDirtyProperties {
 - (NSString *)debugDescription
 {
     NSArray<NSString *> *parentDebugDescription = [[super debugDescription] componentsSeparatedByString:@"\n"];
-    NSMutableArray *descriptionFields = [NSMutableArray arrayWithCapacity:8];
+    NSMutableArray *descriptionFields = [NSMutableArray arrayWithCapacity:9];
     [descriptionFields addObject:parentDebugDescription];
     struct WDRListDirtyProperties props = _listDirtyProperties;
     if (props.WDRListDirtyPropertyRevision) {
@@ -155,6 +164,9 @@ struct WDRListDirtyProperties {
     }
     if (props.WDRListDirtyPropertyIdentifier) {
         [descriptionFields addObject:[@"_identifier = " stringByAppendingFormat:@"%@", _identifier]];
+    }
+    if (props.WDRListDirtyPropertyTasks) {
+        [descriptionFields addObject:[@"_tasks = " stringByAppendingFormat:@"%@", _tasks]];
     }
     if (props.WDRListDirtyPropertyOwnerId) {
         [descriptionFields addObject:[@"_ownerId = " stringByAppendingFormat:@"%@", _ownerId]];
@@ -197,6 +209,7 @@ struct WDRListDirtyProperties {
         (_listType == anObject.listType || [_listType isEqualToString:anObject.listType]) &&
         (_ownerType == anObject.ownerType || [_ownerType isEqualToString:anObject.ownerType]) &&
         (_identifier == anObject.identifier || [_identifier isEqualToString:anObject.identifier]) &&
+        (_tasks == anObject.tasks || [_tasks isEqual:anObject.tasks]) &&
         (_ownerId == anObject.ownerId || [_ownerId isEqualToString:anObject.ownerId]) &&
         (_title == anObject.title || [_title isEqualToString:anObject.title]) &&
         (_type == anObject.type || [_type isEqualToString:anObject.type])
@@ -210,6 +223,7 @@ struct WDRListDirtyProperties {
         [_listType hash],
         [_ownerType hash],
         [_identifier hash],
+        [_tasks hash],
         [_ownerId hash],
         [_title hash],
         [_type hash],
@@ -247,6 +261,7 @@ struct WDRListDirtyProperties {
     _listType = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"list_type"];
     _ownerType = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"owner_type"];
     _identifier = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"id"];
+    _tasks = [aDecoder decodeObjectOfClass:[NSArray class] forKey:@"tasks"];
     _ownerId = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"owner_id"];
     _title = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"title"];
     _type = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"type"];
@@ -255,6 +270,7 @@ struct WDRListDirtyProperties {
     _listDirtyProperties.WDRListDirtyPropertyListType = [aDecoder decodeIntForKey:@"list_type_dirty_property"] & 0x1;
     _listDirtyProperties.WDRListDirtyPropertyOwnerType = [aDecoder decodeIntForKey:@"owner_type_dirty_property"] & 0x1;
     _listDirtyProperties.WDRListDirtyPropertyIdentifier = [aDecoder decodeIntForKey:@"id_dirty_property"] & 0x1;
+    _listDirtyProperties.WDRListDirtyPropertyTasks = [aDecoder decodeIntForKey:@"tasks_dirty_property"] & 0x1;
     _listDirtyProperties.WDRListDirtyPropertyOwnerId = [aDecoder decodeIntForKey:@"owner_id_dirty_property"] & 0x1;
     _listDirtyProperties.WDRListDirtyPropertyTitle = [aDecoder decodeIntForKey:@"title_dirty_property"] & 0x1;
     _listDirtyProperties.WDRListDirtyPropertyType = [aDecoder decodeIntForKey:@"type_dirty_property"] & 0x1;
@@ -270,6 +286,7 @@ struct WDRListDirtyProperties {
     [aCoder encodeObject:self.listType forKey:@"list_type"];
     [aCoder encodeObject:self.ownerType forKey:@"owner_type"];
     [aCoder encodeObject:self.identifier forKey:@"id"];
+    [aCoder encodeObject:self.tasks forKey:@"tasks"];
     [aCoder encodeObject:self.ownerId forKey:@"owner_id"];
     [aCoder encodeObject:self.title forKey:@"title"];
     [aCoder encodeObject:self.type forKey:@"type"];
@@ -278,6 +295,7 @@ struct WDRListDirtyProperties {
     [aCoder encodeInt:_listDirtyProperties.WDRListDirtyPropertyListType forKey:@"list_type_dirty_property"];
     [aCoder encodeInt:_listDirtyProperties.WDRListDirtyPropertyOwnerType forKey:@"owner_type_dirty_property"];
     [aCoder encodeInt:_listDirtyProperties.WDRListDirtyPropertyIdentifier forKey:@"id_dirty_property"];
+    [aCoder encodeInt:_listDirtyProperties.WDRListDirtyPropertyTasks forKey:@"tasks_dirty_property"];
     [aCoder encodeInt:_listDirtyProperties.WDRListDirtyPropertyOwnerId forKey:@"owner_id_dirty_property"];
     [aCoder encodeInt:_listDirtyProperties.WDRListDirtyPropertyTitle forKey:@"title_dirty_property"];
     [aCoder encodeInt:_listDirtyProperties.WDRListDirtyPropertyType forKey:@"type_dirty_property"];
@@ -304,6 +322,9 @@ struct WDRListDirtyProperties {
     }
     if (listDirtyProperties.WDRListDirtyPropertyIdentifier) {
         _identifier = modelObject.identifier;
+    }
+    if (listDirtyProperties.WDRListDirtyPropertyTasks) {
+        _tasks = modelObject.tasks;
     }
     if (listDirtyProperties.WDRListDirtyPropertyOwnerId) {
         _ownerId = modelObject.ownerId;
@@ -340,6 +361,9 @@ struct WDRListDirtyProperties {
     if (modelObject.listDirtyProperties.WDRListDirtyPropertyIdentifier) {
         builder.identifier = modelObject.identifier;
     }
+    if (modelObject.listDirtyProperties.WDRListDirtyPropertyTasks) {
+        builder.tasks = modelObject.tasks;
+    }
     if (modelObject.listDirtyProperties.WDRListDirtyPropertyOwnerId) {
         builder.ownerId = modelObject.ownerId;
     }
@@ -372,6 +396,11 @@ struct WDRListDirtyProperties {
 {
     _identifier = identifier;
     _listDirtyProperties.WDRListDirtyPropertyIdentifier = 1;
+}
+- (void)setTasks:(NSArray *)tasks
+{
+    _tasks = tasks;
+    _listDirtyProperties.WDRListDirtyPropertyTasks = 1;
 }
 - (void)setOwnerId:(NSString *)ownerId
 {
