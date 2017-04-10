@@ -11,8 +11,14 @@ due Today in Wunderlist.
 
 3) Create an [App](https://developer.wunderlist.com/apps) to consume the Wunderlist API.
 
-
 # Steps to contribute:
 
 Same steps as above, just make sure to install [Plank](https://github.com/pinterest/plank), which is used for model generation (via the `./generate_models.sh`) script.
+
+# Background
+
+I began using [Wunderlist](https://wunderlist.com) about 6 months ago after years of using [Things](http://culturedcode.com/things/). A few years ago, I wrote [this post](https://medium.com/@connor/thngs-app-or-how-i-get-stuff-done-dae36a43277a) on a little Mac app for Things to see what I had left to do that day. I decided to port it over to Wunderlist last weekend.
+
+The code for the Things app is [here](https://github.com/connor/thngs),
+if you're interested.
 
