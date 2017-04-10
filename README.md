@@ -13,7 +13,11 @@ due Today in Wunderlist.
 
 # Steps to contribute:
 
-Same steps as above, just make sure to install [Plank](https://github.com/pinterest/plank), which is used for model generation (via the `./generate_models.sh`) script.
+1. Follow the steps above.
+
+2. If you are modifying the models at all, install [Plank](https://github.com/pinterest/plank), which is used for model generation (via the `./generate_models.sh`) script.
+
+3. Run `pod install` and open up the `.xcworkspace` file.
 
 # Background
 
